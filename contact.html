@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Fredi Dev</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="dashboard.html" style="text-decoration: none; color: inherit;">
+                <h1>Fredi Dev</h1>
+            </a>
+            <div class="online-indicator">
+                <span class="dot"></span>
+                <span id="online-text">Online</span>
+            </div>
+        </div>
+
+        <div class="nav-controls">
+            <button class="nav-btn" onclick="toggleLanguage()">
+                <i class="fas fa-language"></i>
+                <span id="lang-text">EN/SW</span>
+            </button>
+            <button class="nav-btn" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span id="logout-text">Logout</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/100" alt="Fredi Dev" class="profile-img">
+                <h3>Fredi Ezra</h3>
+                <p id="user-role">Full-Stack Developer</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span id="nav-dashboard">Dashboard</span>
+                </a>
+                <a href="projects.html" class="nav-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <span id="nav-projects">Projects</span>
+                </a>
+                <a href="services.html" class="nav-item">
+                    <i class="fas fa-tools"></i>
+                    <span id="nav-services">Services</span>
+                </a>
+                <a href="about.html" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span id="nav-about">About</span>
+                </a>
+                <a href="contact.html" class="nav-item active">
+                    <i class="fas fa-envelope"></i>
+                    <span id="nav-contact">Contact</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1 id="contact-title">Get In Touch</h1>
+                <p id="contact-subtitle">Let's work together on your next project</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <h2 id="contact-info-title"><i class="fas fa-address-card"></i> Contact Information</h2>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3 id="method-phone">Phone Numbers</h3>
+                                <div class="phone-numbers">
+                                    <div class="phone-group">
+                                        <strong id="phone-office">Office:</strong>
+                                        <div class="numbers">
+                                            <span>+255 752 593 977</span>
+                                            <span>+255 691 885 967</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-group">
+                                        <strong id="phone-private">Private:</strong>
+                                        <div class="numbers">
+                                            <span>+255 620 814 108</span>
+                                            <span>+255 764 182 801</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3 id="method-email">Email Addresses</h3>
+                                <div class="emails">
+                                    <div class="email-group">
+                                        <strong id="email-private">Private:</strong>
+                                        <span>frediezra60@gmail.com</span>
+                                    </div>
+                                    <div class="email-group">
+                                        <strong id="email-business">Business:</strong>
+                                        <span>frediezra360@gmail.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3 id="method-whatsapp">WhatsApp Business</h3>
+                                <div class="whatsapp-info">
+                                    <p id="whatsapp-desc">Fastest way to reach me for quick queries</p>
+                                    <a href="https://wa.me/255752593977" class="whatsapp-link" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <span id="whatsapp-chat">Start Chat</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3 id="method-location">Location</h3>
+                                <div class="location-info">
+                                    <p><strong id="location-current">Current:</strong> Dar es Salaam, Tanzania</p>
+                                    <p><strong id="location-hometown">Hometown:</strong> Arusha, Tanzania</p>
+                                    <p><strong id="location-timezone">Timezone:</strong> EAT (UTC+3)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2 id="form-title"><i class="fas fa-paper-plane"></i> Send Message</h2>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" id="label-name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" id="label-email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" id="label-phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service" id="label-service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="" id="option-select">Select a service</option>
+                                <option value="whatsapp" id="option-whatsapp">WhatsApp Bot Development</option>
+                                <option value="web" id="option-web">Web Development</option>
+                                <option value="mobile" id="option-mobile">Mobile App Development</option>
+                                <option value="ai" id="option-ai">AI & Machine Learning</option>
+                                <option value="tools" id="option-tools">Premium Tools</option>
+                                <option value="consulting" id="option-consulting">Tech Consulting</option>
+                                <option value="other" id="option-other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget" id="label-budget">Project Budget (USD)</label>
+                            <select id="budget" name="budget">
+                                <option value="" id="option-budget">Select budget range</option>
+                                <option value="50-100" id="option-50-100">$50 - $100</option>
+                                <option value="100-500" id="option-100-500">$100 - $500</option>
+                                <option value="500-1000" id="option-500-1000">$500 - $1,000</option>
+                                <option value="1000+" id="option-1000+">$1,000+</option>
+                                <option value="discuss" id="option-discuss">Let's discuss</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" id="label-message">Project Details *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Describe your project requirements..." required></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" id="btn-submit">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                            <button type="reset" class="btn btn-secondary" id="btn-reset">
+                                <i class="fas fa-redo"></i>
+                                Reset Form
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-section">
+                <h2 id="social-links-title"><i class="fas fa-share-alt"></i> Follow Me</h2>
+                <div class="social-links-grid">
+                    <a href="https://github.com/Fred1e" class="social-link-card github" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <div class="social-info">
+                            <h3>GitHub</h3>
+                            <p id="social-github-desc">Main projects and code</p>
+                            <span class="social-handle">@Fred1e</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/FezChat" class="social-link-card github" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <div class="social-info">
+                            <h3>GitHub</h3>
+                            <p id="social-github2-desc">Chat projects</p>
+                            <span class="social-handle">@FezChat</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/mr-X-force" class="social-link-card github" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <div class="social-info">
+                            <h3>GitHub</h3>
+                            <p id="social-github3-desc">Bot projects</p>
+                            <span class="social-handle">@mr-X-force</span>
+                        </div>
+                    </a>
+
+                    <a href="https://instagram.com/frediezra" class="social-link-card instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <div class="social-info">
+                            <h3>Instagram</h3>
+                            <p id="social-insta-desc">Personal updates</p>
+                            <span class="social-handle">@frediezra</span>
+                        </div>
+                    </a>
+
+                    <a href="https://facebook.com/FrediEzra" class="social-link-card facebook" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                        <div class="social-info">
+                            <h3>Facebook</h3>
+                            <p id="social-fb-desc">Professional profile</p>
+                            <span class="social-handle">@FrediEzra</span>
+                        </div>
+                    </a>
+
+                    <a href="https://tiktok.com/@frediezra" class="social-link-card tiktok" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                        <div class="social-info">
+                            <h3>TikTok</h3>
+                            <p id="social-tiktok-desc">Tech content</p>
+                            <span class="social-handle">@frediezra</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Donation Section -->
+            <div class="donation-section">
+                <h2 id="donation-title"><i class="fas fa-hand-holding-heart"></i> Support My Work</h2>
+                <div class="donation-content">
+                    <p id="donation-desc">Your support helps me continue developing amazing open-source projects and tools:</p>
+                    
+                    <div class="donation-methods">
+                        <div class="donation-method">
+                            <div class="donation-icon vodacom">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="donation-details">
+                                <h3 id="donation-vodacom">Vodacom M-Pesa</h3>
+                                <div class="donation-number">0752 593 977</div>
+                                <p id="donation-tanzania">Available in Tanzania</p>
+                            </div>
+                        </div>
+
+                        <div class="donation-method">
+                            <div class="donation-icon halotel">
+                                <i class="fas fa-sim-card"></i>
+                            </div>
+                            <div class="donation-details">
+                                <h3 id="donation-halotel">Halotel</h3>
+                                <div class="donation-number">0620 814 108</div>
+                                <p id="donation-tanzania2">Available in Tanzania</p>
+                            </div>
+                        </div>
+
+                        <div class="donation-method">
+                            <div class="donation-icon airtel">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="donation-details">
+                                <h3 id="donation-airtel">Airtel Money</h3>
+                                <div class="donation-number">0691 885 967</div>
+                                <p id="donation-tanzania3">Available in Tanzania</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="donation-note">
+                        <p id="donation-thanks">Thank you for your support! ❤️</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Live Counters -->
+    <div class="live-counters">
+        <div class="counter">
+            <i class="fas fa-envelope"></i>
+            <span id="messages-count">Messages: 847</span>
+        </div>
+        <div class="counter">
+            <i class="fas fa-users"></i>
+            <span id="online-count">Online: 35</span>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            showLoading();
+            
+            // Simulate form submission
+            setTimeout(() => {
+                alert('Message sent successfully! I will get back to you within 24 hours.');
+                this.reset();
+                hideLoading();
+            }, 2000);
+        });
+
+        // Pre-fill service if coming from services page
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const service = urlParams.get('service');
+            if (service) {
+                document.getElementById('service').value = service;
+            }
+        });
+    </script>
+</body>
+</html>
