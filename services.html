@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Fredi Dev</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="dashboard.html" style="text-decoration: none; color: inherit;">
+                <h1>Fredi Dev</h1>
+            </a>
+            <div class="online-indicator">
+                <span class="dot"></span>
+                <span id="online-text">Online</span>
+            </div>
+        </div>
+
+        <div class="nav-controls">
+            <button class="nav-btn" onclick="toggleLanguage()">
+                <i class="fas fa-language"></i>
+                <span id="lang-text">EN/SW</span>
+            </button>
+            <button class="nav-btn" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span id="logout-text">Logout</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/100" alt="Fredi Dev" class="profile-img">
+                <h3>Fredi Ezra</h3>
+                <p id="user-role">Full-Stack Developer</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span id="nav-dashboard">Dashboard</span>
+                </a>
+                <a href="projects.html" class="nav-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <span id="nav-projects">Projects</span>
+                </a>
+                <a href="services.html" class="nav-item active">
+                    <i class="fas fa-tools"></i>
+                    <span id="nav-services">Services</span>
+                </a>
+                <a href="about.html" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span id="nav-about">About</span>
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <span id="nav-contact">Contact</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1 id="services-title">My Services</h1>
+                <p id="services-subtitle">Professional development services and tools</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <!-- WhatsApp Bot Development -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="service-badges">
+                            <span class="badge badge-popular" id="badge-popular">Most Popular</span>
+                        </div>
+                    </div>
+                    <h3 class="service-name" id="service-whatsapp">WhatsApp Bot Development</h3>
+                    <p class="service-description" id="service-whatsapp-desc">
+                        Custom WhatsApp bots with AI integration, multi-language support, 
+                        200+ plugins, and advanced automation features.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-ai">AI Chat Integration</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-plugins">200+ Plugins</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-multi">Multi-Device Support</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-updates">Daily Updates</span>
+                        </div>
+                    </div>
+                    <div class="service-pricing">
+                        <div class="price">
+                            <span class="amount">$50</span>
+                            <span class="period" id="price-custom">Custom Project</span>
+                        </div>
+                        <div class="price-note" id="price-starting">Starting from</div>
+                    </div>
+                    <div class="service-actions">
+                        <button class="btn btn-primary" onclick="orderService('whatsapp')" id="btn-order-whatsapp">
+                            <i class="fas fa-shopping-cart"></i>
+                            Order Now
+                        </button>
+                        <button class="btn btn-secondary" onclick="viewDemo('whatsapp')" id="btn-demo-whatsapp">
+                            <i class="fas fa-play"></i>
+                            View Demo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-name" id="service-web">Web Development</h3>
+                    <p class="service-description" id="service-web-desc">
+                        Responsive websites and web applications using modern technologies 
+                        like React, Node.js, MongoDB, and cloud deployment.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-responsive">Responsive Design</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-modern">Modern Stack</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-seo">SEO Optimized</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-fast">Fast Loading</span>
+                        </div>
+                    </div>
+                    <div class="service-pricing">
+                        <div class="price">
+                            <span class="amount">$100</span>
+                            <span class="period" id="price-website">Website</span>
+                        </div>
+                        <div class="price-note" id="price-starting2">Starting from</div>
+                    </div>
+                    <div class="service-actions">
+                        <button class="btn btn-primary" onclick="orderService('web')" id="btn-order-web">
+                            <i class="fas fa-shopping-cart"></i>
+                            Order Now
+                        </button>
+                        <button class="btn btn-secondary" onclick="viewDemo('web')" id="btn-demo-web">
+                            <i class="fas fa-eye"></i>
+                            View Portfolio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Apps -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-name" id="service-mobile">Mobile App Development</h3>
+                    <p class="service-description" id="service-mobile-desc">
+                        Cross-platform mobile applications for iOS and Android using 
+                        React Native and Flutter with native performance.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-cross">Cross-Platform</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-native">Native Performance</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-store">App Store Ready</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-ui">Beautiful UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="service-pricing">
+                        <div class="price">
+                            <span class="amount">$200</span>
+                            <span class="period" id="price-app">Mobile App</span>
+                        </div>
+                        <div class="price-note" id="price-starting3">Starting from</div>
+                    </div>
+                    <div class="service-actions">
+                        <button class="btn btn-primary" onclick="orderService('mobile')" id="btn-order-mobile">
+                            <i class="fas fa-shopping-cart"></i>
+                            Order Now
+                        </button>
+                        <button class="btn btn-secondary" onclick="viewDemo('mobile')" id="btn-demo-mobile">
+                            <i class="fas fa-info"></i>
+                            More Info
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AI Tools -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="service-badges">
+                            <span class="badge badge-new" id="badge-new">New</span>
+                        </div>
+                    </div>
+                    <h3 class="service-name" id="service-ai">AI & Machine Learning</h3>
+                    <p class="service-description" id="service-ai-desc">
+                        Custom AI solutions including chatbots, recommendation systems, 
+                        computer vision, and natural language processing.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-chatbots">Custom Chatbots</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-nlp">NLP Processing</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-cv">Computer Vision</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-ml">ML Models</span>
+                        </div>
+                    </div>
+                    <div class="service-pricing">
+                        <div class="price">
+                            <span class="amount">$150</span>
+                            <span class="period" id="price-ai">AI Project</span>
+                        </div>
+                        <div class="price-note" id="price-starting4">Starting from</div>
+                    </div>
+                    <div class="service-actions">
+                        <button class="btn btn-primary" onclick="orderService('ai')" id="btn-order-ai">
+                            <i class="fas fa-shopping-cart"></i>
+                            Order Now
+                        </button>
+                        <button class="btn btn-secondary" onclick="viewDemo('ai')" id="btn-demo-ai">
+                            <i class="fas fa-cogs"></i>
+                            View Examples
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pro Tools -->
+                <div class="service-card pro-tool">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="service-badges">
+                            <span class="badge badge-pro" id="badge-pro">Pro Tool</span>
+                        </div>
+                    </div>
+                    <h3 class="service-name" id="service-tools">Premium Tools</h3>
+                    <p class="service-description" id="service-tools-desc">
+                        Ready-to-use premium tools including social media downloaders, 
+                        automation scripts, and custom business solutions.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-downloader">Social Downloaders</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-automation">Automation</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-business">Business Tools</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-support">24/7 Support</span>
+                        </div>
+                    </div>
+                    <div class="service-pricing">
+                        <div class="price">
+                            <span class="amount">$20</span>
+                            <span class="period" id="price-tool">Per Tool</span>
+                        </div>
+                        <div class="price-note" id="price-oneTime">One-time payment</div>
+                    </div>
+                    <div class="service-actions">
+                        <button class="btn btn-warning" onclick="viewTools()" id="btn-view-tools">
+                            <i class="fas fa-store"></i>
+                            Visit Tools Store
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Consulting -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-name" id="service-consulting">Tech Consulting</h3>
+                    <p class="service-description" id="service-consulting-desc">
+                        Professional consulting services for technology stack selection, 
+                        architecture design, and development strategy.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-architecture">Architecture Design</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-techstack">Tech Stack Advice</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-strategy">Development Strategy</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span id="feature-code">Code Review</span>
+                        </div>
+                    </div>
+                    <div class="service-pricing">
+                        <div class="price">
+                            <span class="amount">$30</span>
+                            <span class="period" id="price-hour">Per Hour</span>
+                        </div>
+                        <div class="price-note" id="price-flexible">Flexible packages</div>
+                    </div>
+                    <div class="service-actions">
+                        <button class="btn btn-primary" onclick="startConsultation()" id="btn-consult">
+                            <i class="fas fa-calendar"></i>
+                            Book Session
+                        </button>
+                        <button class="btn btn-secondary" onclick="contactMe()" id="btn-contact-consult">
+                            <i class="fas fa-envelope"></i>
+                            Contact
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools Store Preview -->
+            <div class="tools-preview">
+                <h2 id="tools-title">Popular Pro Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h4 id="tool-downloader">Social Media Downloader</h4>
+                        <p id="tool-downloader-desc">Download videos from Instagram, TikTok, YouTube</p>
+                        <div class="tool-price">$15</div>
+                        <button class="btn btn-small" onclick="buyTool('downloader')" id="btn-buy-downloader">
+                            <i class="fas fa-shopping-cart"></i>
+                            Buy Now
+                        </button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4 id="tool-chatbot">AI Chatbot System</h4>
+                        <p id="tool-chatbot-desc">Custom AI chatbot for your business</p>
+                        <div class="tool-price">$25</div>
+                        <button class="btn btn-small" onclick="buyTool('chatbot')" id="btn-buy-chatbot">
+                            <i class="fas fa-shopping-cart"></i>
+                            Buy Now
+                        </button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h4 id="tool-movies">Movies API Access</h4>
+                        <p id="tool-movies-desc">Full access to movies library API</p>
+                        <div class="tool-price">$10/month</div>
+                        <button class="btn btn-small" onclick="buyTool('movies')" id="btn-buy-movies">
+                            <i class="fas fa-shopping-cart"></i>
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Live Counters -->
+    <div class="live-counters">
+        <div class="counter">
+            <i class="fas fa-tools"></i>
+            <span id="services-count">Services: 6+</span>
+        </div>
+        <div class="counter">
+            <i class="fas fa-users"></i>
+            <span id="online-count">Online: 42</span>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script>
+        // Service ordering functions
+        function orderService(serviceType) {
+            showLoading();
+            setTimeout(() => {
+                alert(`Redirecting to order form for ${serviceType} service...`);
+                // In real implementation, redirect to order form
+                hideLoading();
+            }, 1000);
+        }
+
+        function viewDemo(serviceType) {
+            showLoading();
+            setTimeout(() => {
+                if (serviceType === 'whatsapp') {
+                    window.open('https://github.com/mr-X-force/fredi-md', '_blank');
+                } else if (serviceType === 'web') {
+                    window.open('projects.html', '_blank');
+                }
+                hideLoading();
+            }, 500);
+        }
+
+        function viewTools() {
+            showLoading();
+            setTimeout(() => {
+                alert('Opening tools store...');
+                // In real implementation, open tools store page
+                hideLoading();
+            }, 500);
+        }
+
+        function startConsultation() {
+            showLoading();
+            setTimeout(() => {
+                window.location.href = 'contact.html?service=consulting';
+            }, 500);
+        }
+
+        function contactMe() {
+            window.location.href = 'contact.html';
+        }
+
+        function buyTool(toolName) {
+            showLoading();
+            setTimeout(() => {
+                alert(`Purchasing ${toolName}... Redirecting to payment.`);
+                // In real implementation, redirect to payment page
+                hideLoading();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
