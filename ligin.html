@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Fredi Dev</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <button class="back-btn" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 id="auth-title">WhatsApp Authentication</h1>
+            <p id="auth-subtitle">Secure login with WhatsApp verification</p>
+        </div>
+
+        <div class="auth-form">
+            <div class="form-group">
+                <label for="phone" id="phone-label">Phone Number:</label>
+                <div class="input-group">
+                    <span class="prefix">+255</span>
+                    <input type="tel" id="phone" placeholder="752593977" maxlength="9">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="code" id="code-label">Verification Code:</label>
+                <input type="text" id="code" placeholder="Enter 6-digit code" maxlength="6">
+            </div>
+
+            <button class="verify-btn" onclick="sendVerification()" id="send-code-btn">
+                <i class="fab fa-whatsapp"></i>
+                Send Verification Code
+            </button>
+
+            <button class="verify-btn secondary" onclick="verifyCode()" id="verify-btn">
+                <i class="fas fa-check"></i>
+                Verify Code
+            </button>
+
+            <div class="auth-info">
+                <h3 id="info-title">Authentication Info:</h3>
+                <p id="info-text">Code will be sent from: <strong>+255752593977</strong></p>
+                <p id="info-note">This is a simulation for demo purposes</p>
+            </div>
+        </div>
+
+        <div class="auth-footer">
+            <p id="footer-text">Having trouble? <a href="contact.html">Contact Support</a></p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
