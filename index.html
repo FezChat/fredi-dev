@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fredi Dev - Welcome</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/welcome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+        <p id="loading-text">Loading Fredi Dev...</p>
+    </div>
+
+    <!-- Language & Theme Switch -->
+    <div class="controls">
+        <button class="control-btn lang-btn" onclick="toggleLanguage()">
+            <i class="fas fa-language"></i> EN/SW
+        </button>
+        <button class="control-btn theme-btn" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Welcome Content -->
+    <div class="welcome-container">
+        <div class="hero-section">
+            <div class="logo">
+                <h1 id="welcome-title">Fredi Dev</h1>
+                <div class="tagline" id="welcome-subtitle">Full-Stack Developer & AI Specialist</div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3 id="stat-users">10,000+</h3>
+                    <p id="stat-users-text">Active Users</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>50+</h3>
+                    <p id="stat-projects-text">Projects</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-code"></i>
+                    <h3>15+</h3>
+                    <p id="stat-languages-text">Programming Languages</p>
+                </div>
+            </div>
+
+            <div class="auth-options">
+                <button class="auth-btn primary" onclick="redirectToLogin()" id="login-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    Login with WhatsApp
+                </button>
+                <button class="auth-btn secondary" onclick="redirectToDashboard()" id="guest-btn">
+                    <i class="fas fa-user"></i>
+                    Continue as Guest
+                </button>
+            </div>
+
+            <div class="quick-links">
+                <a href="projects.html" class="quick-link" id="view-projects">
+                    <i class="fas fa-eye"></i>
+                    View Projects
+                </a>
+                <a href="about.html" class="quick-link" id="about-me">
+                    <i class="fas fa-user"></i>
+                    About Me
+                </a>
+                <a href="services.html" class="quick-link" id="services-link">
+                    <i class="fas fa-tools"></i>
+                    Services
+                </a>
+            </div>
+        </div>
+
+        <!-- Live Indicators -->
+        <div class="live-indicators">
+            <div class="live-status">
+                <span class="live-dot"></span>
+                <span id="live-text">Live Status: Online</span>
+            </div>
+            <div class="user-counter">
+                <i class="fas fa-users"></i>
+                <span id="user-count">Users Online: 1</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script>
+        // Redirect functions
+        function redirectToLogin() {
+            showLoading();
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 1000);
+        }
+
+        function redirectToDashboard() {
+            showLoading();
+            setTimeout(() => {
+                window.location.href = 'dashboard.html';
+            }, 1000);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            hideLoading();
+            updateUserCounter();
+        });
+    </script>
+</body>
+</html>
