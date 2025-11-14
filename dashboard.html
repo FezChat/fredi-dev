@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Fredi Dev</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h1>Fredi Dev</h1>
+            <div class="online-indicator">
+                <span class="dot"></span>
+                <span id="online-text">Online</span>
+            </div>
+        </div>
+
+        <div class="nav-controls">
+            <button class="nav-btn" onclick="toggleLanguage()">
+                <i class="fas fa-language"></i>
+                <span id="lang-text">EN/SW</span>
+            </button>
+            <button class="nav-btn" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span id="logout-text">Logout</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/100" alt="Fredi Dev" class="profile-img">
+                <h3>Fredi Ezra</h3>
+                <p id="user-role">Full-Stack Developer</p>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="number">50+</span>
+                        <span id="projects-text">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">3</span>
+                        <span id="years-text">Years</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span id="nav-dashboard">Dashboard</span>
+                </a>
+                <a href="projects.html" class="nav-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <span id="nav-projects">Projects</span>
+                </a>
+                <a href="services.html" class="nav-item">
+                    <i class="fas fa-tools"></i>
+                    <span id="nav-services">Services</span>
+                </a>
+                <a href="about.html" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span id="nav-about">About</span>
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <span id="nav-contact">Contact</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Area -->
+        <main class="main-content">
+            <div class="welcome-banner">
+                <h1 id="welcome-back">Welcome Back, Fredi!</h1>
+                <p id="dashboard-subtitle">Here's your development dashboard</p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-users">10,284</h3>
+                        <p id="total-users-text">Total Users</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>5</h3>
+                        <p id="active-bots-text">Active Bots</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>1,200+</h3>
+                        <p id="movies-text">Movies Library</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>15+</h3>
+                        <p id="languages-text">Languages</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="activity-section">
+                <h2 id="recent-activity">Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <i class="fas fa-whatsapp activity-icon"></i>
+                        <div class="activity-content">
+                            <p id="activity-1">FREDI-MD updated with new plugins</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-film activity-icon"></i>
+                        <div class="activity-content">
+                            <p id="activity-2">Movies library added 50 new titles</p>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-code activity-icon"></i>
+                        <div class="activity-content">
+                            <p id="activity-3">New coding tools deployed</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Live Counters -->
+    <div class="live-counters">
+        <div class="counter">
+            <i class="fas fa-eye"></i>
+            <span id="visit-count">Visits: 1,284</span>
+        </div>
+        <div class="counter">
+            <i class="fas fa-users"></i>
+            <span id="online-count">Online: 47</span>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
