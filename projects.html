@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Fredi Dev</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="dashboard.html" style="text-decoration: none; color: inherit;">
+                <h1>Fredi Dev</h1>
+            </a>
+            <div class="online-indicator">
+                <span class="dot"></span>
+                <span id="online-text">Online</span>
+            </div>
+        </div>
+
+        <div class="nav-controls">
+            <button class="nav-btn" onclick="toggleLanguage()">
+                <i class="fas fa-language"></i>
+                <span id="lang-text">EN/SW</span>
+            </button>
+            <button class="nav-btn" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span id="logout-text">Logout</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/100" alt="Fredi Dev" class="profile-img">
+                <h3>Fredi Ezra</h3>
+                <p id="user-role">Full-Stack Developer</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span id="nav-dashboard">Dashboard</span>
+                </a>
+                <a href="projects.html" class="nav-item active">
+                    <i class="fas fa-project-diagram"></i>
+                    <span id="nav-projects">Projects</span>
+                </a>
+                <a href="services.html" class="nav-item">
+                    <i class="fas fa-tools"></i>
+                    <span id="nav-services">Services</span>
+                </a>
+                <a href="about.html" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span id="nav-about">About</span>
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <span id="nav-contact">Contact</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1 id="projects-title">My Projects</h1>
+                <p id="projects-subtitle">Innovative solutions powered by advanced technology</p>
+            </div>
+
+            <!-- Projects Filter -->
+            <div class="filter-section">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all" id="filter-all">All Projects</button>
+                    <button class="filter-btn" data-filter="whatsapp" id="filter-whatsapp">WhatsApp Bots</button>
+                    <button class="filter-btn" data-filter="web" id="filter-web">Web Apps</button>
+                    <button class="filter-btn" data-filter="tools" id="filter-tools">Tools</button>
+                    <button class="filter-btn" data-filter="ai" id="filter-ai">AI Projects</button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- FREDI-MD -->
+                <div class="project-card" data-category="whatsapp ai">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="badge badge-primary" id="badge-popular">Popular</span>
+                            <span class="badge badge-success" id="badge-active">Active</span>
+                        </div>
+                    </div>
+                    <h3 class="project-name">FREDI-MD</h3>
+                    <p class="project-description" id="project-desc-1">
+                        Advanced WhatsApp bot with 200+ plugins, AI integration, and multi-platform support. 
+                        Serving 10,000+ active users with daily updates.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>10,000+ <span id="stat-users">Users</span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-plug"></i>
+                            <span>200+ <span id="stat-plugins">Plugins</span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-star"></i>
+                            <span>4.8/5 <span id="stat-rating">Rating</span></span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">AI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/mr-X-force/fredi-md" class="project-link link-github" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span id="link-github">GitHub</span>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029VbAjdiWBFLgXpS7VJz1u" class="project-link link-live" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span id="link-channel">Channel</span>
+                        </a>
+                        <a href="#" class="project-link link-demo">
+                            <i class="fas fa-play"></i>
+                            <span id="link-demo">Demo</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LUCKY-MD-XFORCE -->
+                <div class="project-card" data-category="whatsapp">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="badge badge-warning" id="badge-new">New</span>
+                        </div>
+                    </div>
+                    <h3 class="project-name">LUCKY-MD-XFORCE</h3>
+                    <p class="project-description" id="project-desc-2">
+                        Modern WhatsApp bot built with JavaScript and Docker. Features 50+ modules, 
+                        AI chat, media downloaders, and advanced automation.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>2,000+ <span id="stat-users2">Users</span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-cube"></i>
+                            <span>50+ <span id="stat-modules">Modules</span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Docker <span id="stat-container">Container</span></span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Baileys</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/mr-X-force/LUCKY-MD-XFORCE" class="project-link link-github" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span id="link-github2">GitHub</span>
+                        </a>
+                        <a href="https://lucky-ai-docs.vercel.app" class="project-link link-live" target="_blank">
+                            <i class="fas fa-book"></i>
+                            <span id="link-docs">Documentation</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Movies Library -->
+                <div class="project-card" data-category="web tools">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="badge badge-success" id="badge-free">Free</span>
+                        </div>
+                    </div>
+                    <h3 class="project-name">FREDI MOVIES LIBRARY</h3>
+                    <p class="project-description" id="project-desc-3">
+                        Smart movie hub with AI-powered recommendations, HD trailers, 
+                        and comprehensive TV shows library. Fast and user-friendly.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-film"></i>
+                            <span>1,200+ <span id="stat-movies">Movies</span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-tv"></i>
+                            <span>300+ <span id="stat-shows">TV Shows</span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-user"></i>
+                            <span>5,000+ <span id="stat-visitors">Visitors</span></span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">AI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://fredi-movies-library.vercel.app/" class="project-link link-live" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span id="link-visit">Visit Site</span>
+                        </a>
+                        <a href="https://fredi-movies-library.vercel.app/docs" class="project-link link-github" target="_blank">
+                            <i class="fas fa-book"></i>
+                            <span id="link-docs2">Documentation</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Old Portfolio -->
+                <div class="project-card" data-category="web">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="badge badge-info" id="badge-legacy">Legacy</span>
+                        </div>
+                    </div>
+                    <h3 class="project-name">FREDI AI SITE</h3>
+                    <p class="project-description" id="project-desc-4">
+                        My previous portfolio website showcasing various AI projects and development work. 
+                        Includes demo projects and technical documentation.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-eye"></i>
+                            <span>10K+ <span id="stat-views">Views</span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>15+ <span id="stat-demos">Demos</span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-code"></i>
+                            <span>Full <span id="stat-stack">Stack</span></span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Vercel</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://fredi-ai-site.vercel.app" class="project-link link-live" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span id="link-visit2">Visit Site</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social Media Downloader -->
+                <div class="project-card" data-category="tools">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="badge badge-warning" id="badge-pro">Pro Tool</span>
+                        </div>
+                    </div>
+                    <h3 class="project-name">Social Media Downloader</h3>
+                    <p class="project-description" id="project-desc-5">
+                        Advanced tool for downloading media from various social media platforms. 
+                        Supports Instagram, TikTok, YouTube, Twitter and more.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-platforms"></i>
+                            <span>10+ <span id="stat-platforms">Platforms</span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-download"></i>
+                            <span>50K+ <span id="stat-downloads">Downloads</span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-bolt"></i>
+                            <span>Fast <span id="stat-speed">Speed</span></span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">API</span>
+                        <span class="tech-tag">FFmpeg</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link link-demo">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="link-buy">Buy Now</span>
+                        </a>
+                        <a href="#" class="project-link link-github">
+                            <i class="fas fa-info"></i>
+                            <span id="link-info">Info</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coding Playground -->
+                <div class="project-card" data-category="web tools">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="badge badge-success" id="badge-free2">Free</span>
+                        </div>
+                    </div>
+                    <h3 class="project-name">Coding Playground</h3>
+                    <p class="project-description" id="project-desc-6">
+                        Online code editor supporting 15+ programming languages. 
+                        Test, edit, and run code directly in browser with real-time output.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-code"></i>
+                            <span>15+ <span id="stat-languages">Languages</span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-bolt"></i>
+                            <span>Real-time <span id="stat-output">Output</span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-share"></i>
+                            <span>Share <span id="stat-code">Code</span></span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag"> Monaco</span>
+                        <span class="tech-tag">API</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link link-live">
+                            <i class="fas fa-play"></i>
+                            <span id="link-try">Try Now</span>
+                        </a>
+                        <a href="#" class="project-link link-github">
+                            <i class="fab fa-github"></i>
+                            <span id="link-source">Source</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Live Counters -->
+    <div class="live-counters">
+        <div class="counter">
+            <i class="fas fa-project-diagram"></i>
+            <span id="projects-count">Projects: 15+</span>
+        </div>
+        <div class="counter">
+            <i class="fas fa-users"></i>
+            <span id="online-count">Online: 32</span>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script>
+        // Project filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            if (card.getAttribute('data-category').includes(filterValue)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
