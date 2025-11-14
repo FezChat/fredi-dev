@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Fredi Dev</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="dashboard.html" style="text-decoration: none; color: inherit;">
+                <h1>Fredi Dev</h1>
+            </a>
+            <div class="online-indicator">
+                <span class="dot"></span>
+                <span id="online-text">Online</span>
+            </div>
+        </div>
+
+        <div class="nav-controls">
+            <button class="nav-btn" onclick="toggleLanguage()">
+                <i class="fas fa-language"></i>
+                <span id="lang-text">EN/SW</span>
+            </button>
+            <button class="nav-btn" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span id="logout-text">Logout</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/100" alt="Fredi Dev" class="profile-img">
+                <h3>Fredi Ezra</h3>
+                <p id="user-role">Full-Stack Developer</p>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="number">50+</span>
+                        <span id="projects-text">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">3</span>
+                        <span id="years-text">Years</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span id="nav-dashboard">Dashboard</span>
+                </a>
+                <a href="projects.html" class="nav-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <span id="nav-projects">Projects</span>
+                </a>
+                <a href="services.html" class="nav-item">
+                    <i class="fas fa-tools"></i>
+                    <span id="nav-services">Services</span>
+                </a>
+                <a href="about.html" class="nav-item active">
+                    <i class="fas fa-user"></i>
+                    <span id="nav-about">About</span>
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <span id="nav-contact">Contact</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1 id="about-title">About Fredi Dev</h1>
+                <p id="about-subtitle">Full-Stack Developer & AI Specialist from Tanzania</p>
+            </div>
+
+            <!-- Personal Information -->
+            <div class="info-sections">
+                <!-- Basic Info -->
+                <section class="info-section">
+                    <h2 id="basic-info-title"><i class="fas fa-user"></i> Personal Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <strong id="info-fullname">Full Name:</strong>
+                            <span>Fredi Elibarick Ezra</span>
+                        </div>
+                        <div class="info-item">
+                            <strong id="info-birth">Date of Birth:</strong>
+                            <span>June 1, 2003</span>
+                        </div>
+                        <div class="info-item">
+                            <strong id="info-age">Age:</strong>
+                            <span>21 years</span>
+                        </div>
+                        <div class="info-item">
+                            <strong id="info-nationality">Nationality:</strong>
+                            <span>Tanzanian</span>
+                        </div>
+                        <div class="info-item">
+                            <strong id="info-nationalid">National ID:</strong>
+                            <span>20030601</span>
+                        </div>
+                        <div class="info-item">
+                            <strong id="info-status">Marital Status:</strong>
+                            <span id="marital-status">Single</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Location -->
+                <section class="info-section">
+                    <h2 id="location-title"><i class="fas fa-map-marker-alt"></i> Location Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <strong id="info-hometown">Hometown:</strong>
+                            <span>Arusha, Tanzania</span>
+                        </div>
+                        <div class="info-item">
+                            <strong id="info-current">Current Location:</strong>
+                            <span>Dar es Salaam, Tanzania</span>
+                        </div>
+                        <div class="info-item">
+                            <strong id="info-timezone">Timezone:</strong>
+                            <span>East Africa Time (EAT)</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="info-section">
+                    <h2 id="education-title"><i class="fas fa-graduation-cap"></i> Education Background</h2>
+                    <div class="education-timeline">
+                        <div class="education-item">
+                            <div class="edu-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <div class="edu-content">
+                                <h3 id="edu-primary">Primary School</h3>
+                                <p class="edu-school">Selian Primary School - Arusha</p>
+                                <p class="edu-period">2012 - 2018</p>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="edu-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="edu-content">
+                                <h3 id="edu-secondary">Secondary School (O-Level)</h3>
+                                <p class="edu-school">Kimnyaki Secondary School - Arusha</p>
+                                <p class="edu-period">2019 - 2022</p>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="edu-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="edu-content">
+                                <h3 id="edu-university">University</h3>
+                                <p class="edu-school">Currently Enrolled in University</p>
+                                <p class="edu-period">2023 - Present</p>
+                                <div class="live-status-edu">
+                                    <span class="live-dot"></span>
+                                    <span id="student-status">Active Student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Family -->
+                <section class="info-section">
+                    <h2 id="family-title"><i class="fas fa-users"></i> Family Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <strong id="info-mother">Mother:</strong>
+                            <span>Deceased</span>
+                        </div>
+                        <div class="info-item">
+                            <strong id="info-father">Father:</strong>
+                            <span>Living</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Details -->
+                <section class="info-section">
+                    <h2 id="contact-details-title"><i class="fas fa-address-book"></i> Contact Details</h2>
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <i class="fas fa-phone office-phone"></i>
+                            <div class="contact-info">
+                                <strong id="contact-office">Office Numbers:</strong>
+                                <p>+255752593977</p>
+                                <p>+255691885967</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-mobile-alt private-phone"></i>
+                            <div class="contact-info">
+                                <strong id="contact-private">Private Numbers:</strong>
+                                <p>+255620814108</p>
+                                <p>+255764182801</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope email"></i>
+                            <div class="contact-info">
+                                <strong id="contact-email">Email Addresses:</strong>
+                                <p>frediezra60@gmail.com (Private)</p>
+                                <p>frediezra360@gmail.com (Business)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Social Media -->
+                <section class="info-section">
+                    <h2 id="social-title"><i class="fas fa-share-alt"></i> Social Media & Online Presence</h2>
+                    <div class="social-grid">
+                        <a href="https://github.com/Fred1e" class="social-link github" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub (Fred1e)</span>
+                        </a>
+                        <a href="https://github.com/FezChat" class="social-link github" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub (FezChat)</span>
+                        </a>
+                        <a href="https://github.com/mr-X-force" class="social-link github" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub (mr-X-force)</span>
+                        </a>
+                        <a href="https://instagram.com/frediezra" class="social-link instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://facebook.com/FrediEzra" class="social-link facebook" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://tiktok.com/@frediezra" class="social-link tiktok" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://wa.me/255752593977" class="social-link whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span id="whatsapp-contact">WhatsApp</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Donation -->
+                <section class="info-section">
+                    <h2 id="donation-title"><i class="fas fa-hand-holding-heart"></i> Donation & Support</h2>
+                    <div class="donation-info">
+                        <p id="donation-desc">Your support helps me continue developing amazing projects:</p>
+                        <div class="donation-methods">
+                            <div class="method">
+                                <i class="fas fa-mobile-alt vodacom"></i>
+                                <strong>Vodacom M-Pesa:</strong>
+                                <span>0752593977</span>
+                            </div>
+                            <div class="method">
+                                <i class="fas fa-sim-card halotel"></i>
+                                <strong>Halotel:</strong>
+                                <span>0620814108</span>
+                            </div>
+                            <div class="method">
+                                <i class="fas fa-wifi airtel"></i>
+                                <strong>Airtel Money:</strong>
+                                <span>0691885967</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Licenses -->
+                <section class="info-section">
+                    <h2 id="licenses-title"><i class="fas fa-file-contract"></i> Licenses</h2>
+                    <div class="licenses-info">
+                        <p id="license-desc">All my open-source projects are released under:</p>
+                        <div class="license-badge">
+                            <i class="fab fa-creative-commons"></i>
+                            <strong>MIT License</strong>
+                        </div>
+                        <p id="license-details">Permissive free software license that allows reuse within proprietary software</p>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="info-section">
+                    <h2 id="skills-title"><i class="fas fa-code"></i> Technical Skills</h2>
+                    <div class="skills-container">
+                        <div class="skill-category">
+                            <h3 id="skill-frontend">Frontend Development</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Vue.js</span>
+                                <span class="skill-tag">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3 id="skill-backend">Backend Development</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">Express.js</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3 id="skill-ai">AI & Machine Learning</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">OpenAI API</span>
+                                <span class="skill-tag">Chatbots</span>
+                                <span class="skill-tag">NLP</span>
+                                <span class="skill-tag">Computer Vision</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3 id="skill-mobile">Mobile Development</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">React Native</span>
+                                <span class="skill-tag">Flutter</span>
+                                <span class="skill-tag">Android</span>
+                                <span class="skill-tag">iOS</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Live Counters -->
+    <div class="live-counters">
+        <div class="counter">
+            <i class="fas fa-user"></i>
+            <span id="profile-views">Profile Views: 2,847</span>
+        </div>
+        <div class="counter">
+            <i class="fas fa-users"></i>
+            <span id="online-count">Online: 28</span>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>
